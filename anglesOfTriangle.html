@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angles of Triangles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        /*background-image: url(https://media.istockphoto.com/vectors/vector-background-vector-id1168080557?k=6&m=1168080557&s=612x612&w=0&h=HfAWhjeL1COEWLPnZl0lxmRjpsttERgchRzj5IUbvRc=);
+        
+        */
+        background-image: url(triangle.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+     .container{
+            width: 80%;
+            padding: 1rem;
+            margin: auto;
+            font-family:'Poppins';
+            font-size: large;
+        }
+        input{
+            display: block;
+            padding: 1rem;
+            margin: 1rem;
+            height: 2vh;
+            font-family: 'Poppins';
+            font-size: medium;
+            width: 28%;
+        }
+       button{
+           padding: 0.5rem;
+           background-color: #663a82;
+           color: white;
+           margin: 1rem;
+           width: 32%;
+           font-size: medium;
+           font-weight: bold;
+           cursor: pointer;
+           border-radius: 3px;
+
+       }
+       #p1{
+           padding: 1rem;
+           margin: 1rem;
+           border: 1px solid #734f96;            
+           width: 30%;
+           font-family: 'Poppins';
+           font-size: medium;
+           font-weight: bold;
+       }
+       h4{
+           margin-bottom: 0;
+       }
+
+       a{
+        padding: 0.5rem;
+           background-color: #663a82;
+           color: white;
+           margin: 1rem;
+           width: 32%;
+           font-size: medium;
+           font-weight: bold;
+           cursor: pointer;
+           border-radius: 3px;
+           display: block;
+           margin-bottom: 1rem;
+    }
+
+       
+</style>
+<body>
+    <center>
+        <div class="container">
+            <h4>Enter the angles in below input boxes and we will tell you if those angles make a Triangle</h4>
+    <form method="dialog"> 
+           
+    <br/>
+    
+    <input type="number" name="NumberOne" id="numberOne" required min="1" />
+    <input type="number" name="NumberTwo" id="numberTwo"  min="1" required />
+    <input type="number" name="NumberThree" id="numberThree"   min="1" required />
+    
+   <button id="btnSubmit" type="submit" onclick="testVariable()" > Submit </button>
+   <!--<input type="button" value="Submit" id="btnSubmit" onclick="testVariable()" />-->
+</form>
+<div>
+    <p id="p1"> Output will be shown here </p>
+  <a href="index.html" style="text-decoration: none; color: white;"> < Go Back</a>
+
+</div>
+        </div>
+    
+</center>
+
+
+<script> 
+
+
+function testVariable() {
+    //debugger
+    var numberOne = document.getElementById("numberOne").value;
+    var numberTwo = document.getElementById("numberTwo").value;
+    var numberThree = document.getElementById("numberThree").value;
+    var sum = parseInt(numberOne)+parseInt(numberTwo)+parseInt(numberThree);
+    
+    if(numberOne === ""||numberTwo === ""||numberThree === "" || parseInt(numberOne) <= 0 || parseInt(numberTwo) <= 0 || parseInt(numberThree) <= 0){
+        document.getElementById("p1").innerText = "Output will be shown here ";
+    }
+    else if(sum === 180){
+        document.getElementById("p1").innerText = "Yayy! these angles can make a triangle";
+    }
+    else{
+        document.getElementById("p1").innerText = "Oops!! these angles cannot make a triangle";
+    }
+
+}</script>
+
+</body>
+</html>

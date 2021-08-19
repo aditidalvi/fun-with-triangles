@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Quiz on Triangles</title>
+    <style>
+       input{
+           display: inline;
+       }
+       label{
+           display: block;
+       }
+       .container{
+        width: 70%;
+            padding: 2rem;
+            margin: auto;
+            font-family:'Poppins';
+            font-size: large;
+            font-weight: bold;
+       }
+       #div1,#div2,#div3,#div4,#div5,#div6,#div7,#div8,#div9,#div10{
+           background-color: #b491c8;
+           padding-left: 9rem;
+           padding-bottom: 1rem;
+           padding-top: 1rem;
+           padding-right: 1.5rem;
+           margin: 1.5rem;
+           color: black;
+       }
+       #div1{
+           padding-top: 1rem;
+       }
+       button{
+        padding: 0.5rem;
+           background-color: #663a82;
+           color: white;
+           margin: 1rem;
+           width: 32%;
+           font-size: medium;
+           font-weight: bold;
+           cursor: pointer;
+           border-radius: 3px;
+           display: block;
+           margin-bottom: 1rem;
+           
+
+    }
+    a{
+        padding: 0.5rem;
+           background-color: #663a82;
+           color: white;
+           margin: 1rem;
+           width: 32%;
+           font-size: medium;
+           font-weight: bold;
+           cursor: pointer;
+           border-radius: 3px;
+           display: block;
+           margin-bottom: 1rem;
+    }
+
+    #p1{
+        padding: 1rem;
+           margin: 1.5rem;
+           border: 1px solid #734f96;            
+           width: 50%;
+           font-family: 'Poppins';
+           font-size: medium;
+           font-weight: bold;
+    }
+       @media (max-width: 800px){
+            #div1,#div2,#div3,#div4,#div5,#div6,#div7,#div8,#div9,#div10{
+                padding:1rem;
+               
+            }
+            .container{
+                font-size: medium;
+                width: 90%;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <form method="dialog">
+        <div class="container">
+            <center>
+                <a href="index.html" style="text-decoration: none;"> < Go Back</a></center>
+        <div id="div1">
+            <label name="question1" id="question1" >1. If a triangle has angles 1350, 150, 300. Is it an obtuse triangle?</label>
+            <input type="radio" name="question1" id="question1" value="yes" required> yes
+            <input type="radio" name="question1" id="question1" value="no" required> no
+        </div>
+       <div id="div2">
+        <label name="question2" >2. If a triangle has angles 1150, 250, 400. Is it an acute triangle?</label>
+        <input type="radio" name="question2" id="question2" value="no" required> yes
+        <input type="radio" name="question2" id="question2" value="yes" required> no
+       </div>
+        <div id="div3">
+            <label name="question3" >3. If a triangle has angles 900, 600, 300. Is it a right angle triangle?</label>
+            <input type="radio" name="question3" id="question3" value="yes" required> yes
+            <input type="radio" name="question3" id="question3" value="no" required > no
+        </div>
+       <div id="div4">
+        <label name="question4">4. A triangle has angles 600, 600, 600. Is it an equilateral triangle?</label>
+        <input type="radio" name="question4" id="question4" value="yes" required> yes
+        <input type="radio" name="question4" id="question4" value="no" required > no
+       </div>
+       <div id="div5">
+        <label name="question5">5. If a triangle has angles 250, 750, 800. Is it an acute triangle?</label>
+        <input type="radio" name="question5" id="question5" value="yes" required> yes
+        <input type="radio" name="question5" id="question5"  value="no" required> no
+       </div>
+       <div id="div6">
+        <label name="question6">6. If a triangle has 2 sides with equal lengths and 750 angle between them. What is the type of triangle?</label>
+        <input type="radio" name="question6" id="question6" value="no" required> Equilateral
+        <input type="radio" name="question6" id="question6" value="yes" required> Isosceles
+        <input type="radio" name="question6" id="question6" value="no" required> Right Angle Triangle
+       </div>
+       <div id="div7">
+        <label name="question7">7. If a triangle has 2 angles of 750. What is the measure of third angle in degree?</label>
+        <input type="radio" name="question7" id="question7" value="no" required>25
+        <input type="radio" name="question7" id="question7" value="yes" required>30
+        <input type="radio" name="question7" id="question7" value="no" required> 15
+       </div>
+       <div id="div8">
+        <label name="question8">8. If a triangle has 2 sides with equal lengths and 600 angle between them. What is the type of triangle?</label>
+        <input type="radio" name="question8" id="question8" value="no" required> Equilateral
+        <input type="radio" name="question8" id="question8" value="no" required> Isosceles
+        <input type="radio" name="question8" id="question8" value="yes" required> Both
+       </div>
+       <div id="div9">
+        <label name="question9">9. The perimeter of an equilateral triangle is 15cm. What is the length of one side?</label>
+        <input type="radio" name="question9" id="question9" value="no" required> 15cm
+        <input type="radio" name="question9" id="question9" value="no" required > 45cm
+        <input type="radio" name="question9" id="question9" value="yes" required> 5cm
+       </div>
+       <div id="div10">
+        <label type="radio" name="qustion10">10. If a triangle has sides of 2cm, 3cm, 4cm, what is the type of triangle?</label>
+        <input type="radio" name="question10" id="question10" value="no" required> Equilateral
+        <input type="radio" name="question10" id="question10" value="no" required > Isoceles
+        <input type="radio" name="question10" id="question10" value="yes" required> Scalene
+
+       </div>
+        
+
+
+        <!--<input type="submit" value="submit" onclick="test()">-->
+      <center><button type="submit" onclick="test()"> Submit </button>
+        <div id="p1"> Score: For each correct answer you will get 1 point</div></center>  
+
+    </form>
+
+   
+        <script>
+            function test(){
+                var amountCorrect = 0;
+                var questionCount = 0;
+
+                for(var i = 1; i <= 10; i++) {
+                    var radios = document.getElementsByName("question" + i);
+                    for(var j = 0; j < radios.length; j++) {
+                        var radio = radios[j];
+                        if(radio.checked){
+                            questionCount++;
+                            /*
+                            if(radio.value === "yes" && radio.checked) {
+                                amountCorrect++;
+                                questionCount++;
+                                //document.getElementById("div"+i).style.backgroundColor = 'green';
+                        }
+                        else{
+                            //document.getElementById("div"+i).style.backgroundColor = 'red';
+                            questionCount++;
+                        }
+                    }
+                   
+                        */
+                    }
+                   
+                    
+                } 
+                }
+                console.log(amountCorrect);
+                console.log(questionCount);
+                if(questionCount==10){
+                    for(var i = 1; i <= 10; i++) {
+                    var radios = document.getElementsByName("question" + i);
+                    for(var j = 0; j < radios.length; j++) {
+                        var radio = radios[j];
+                        if(radio.value === "yes" && radio.checked) {
+                                amountCorrect++;
+                               
+                                document.getElementById("div"+i).style.backgroundColor = 'lightgreen';
+                        }
+                        if(radio.value === "no" && radio.checked){
+                            document.getElementById("div"+i).style.backgroundColor = 'red';
+                        
+                        }
+                   
+                }
+            }
+            document.getElementById("p1").innerText = amountCorrect;
+        }
+                
+                /*
+                else{
+                    document.getElementById(p1).innerText = "Score: For each correct answer you will get 1 point";
+                }*/
+            }
+            
+   
+        </script>
+    </div>
+  
+
+
+    
+</body>
+</html>

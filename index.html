@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Fun with Triangles</title>
+    <style>
+        a{
+            display: block;
+            padding: 2rem;
+            text-decoration: none;
+            border: 1.5px solid black;
+            margin: 1.5rem;
+            background-color: #663a82;
+            color: white;
+            width: 40%;
+            font-size: larger;
+
+       
+        }
+        .container{
+            width: 80%;
+            padding: 1rem;
+            font-family: 'Poppins','sans-serif';
+            font-size: large;
+        }
+
+        body{
+            background-image: url(triangle.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="container">
+    <h1> Welcome to Fun with Triangles. </h1>
+   
+    <a href="anglesOfTriangle.html">Angles of a Triangle?</a>
+    <a href="hypotenuse.html"> Calculate Hypotenuse </a>
+    <a href="calculateArea.html"> Calculate Area </a>
+    <a href="quiz.html"> Take a Quiz? </a>
+    </div>
+    </center>
+</body>
+</html>
+<!---
+<label name="question2" >2. If a triangle has angles 1150, 250, 400. Is it an acute triangle?</label>
+<input type="radio" name="question2" id="question2" value="no" required> yes
+<input type="radio" name="question2" id="question2" value="yes" required> no
+<label name="question3" >3. If a triangle has angles 900, 600, 300. Is it a right angle triangle?</label>
+<input type="radio" name="question3" id="question3" value="yes" required> yes
+<input type="radio" name="question3" id="question3" value="no" required > no
+<label name="question4">4. A triangle has angles 600, 600, 600. Is it an equilateral triangle?</label>
+<input type="radio" name="question4" id="question4" value="yes" required> yes
+<input type="radio" name="question4" id="question4" value="no" required > no
+<label name="question5">5. If a triangle has angles 250, 750, 800. Is it an acute triangle?</label>
+<input type="radio" name="question5" id="question5" value="yes" required> yes
+<input type="radio" name="question5" id="question5"  value="no" required> no
+<label name="question6">6. If a triangle has 2 sides with equal lengths and 750 angle between them. What is the type of triangle?</label>
+<input type="radio" name="question6" id="question6" value="no" required> Equilateral
+<input type="radio" name="question6" id="question6" value="yes" required> Isosceles
+<input type="radio" name="question6" id="question6" value="no" required> Right Angle Triangle
+<label name="question7">7. If a triangle has 2 angles of 750. What is the measure of third angle in degree?</label>
+<input type="radio" name="question7" id="question7" value="no" required>25
+<input type="radio" name="question7" id="question7" value="yes" required>30
+<input type="radio" name="question7" id="question7" value="no" required> 15
+<label name="question8">8. If a triangle has 2 sides with equal lengths and 600 angle between them. What is the type of triangle?</label>
+<input type="radio" name="question8" id="question8" value="no" required> Equilateral
+<input type="radio" name="question8" id="question8" value="no" required> Isosceles
+<input type="radio" name="question8" id="question8" value="yes" required> Both
+<label name="question9">9. The perimeter of an equilateral triangle is 15cm. What is the length of one side?</label>
+<input type="radio" name="question9" id="question9" value="no" required> 15cm
+<input type="radio" name="question9" id="question9" value="no" required > 45cm
+<input type="radio" name="question9" id="question9" value="yes" required> 5cm
+<label type="radio" name="qustion10">10. If a triangle has sides of 2cm, 3cm, 4cm, what is the type of triangle?</label>
+<input type="radio" name="question10" id="question10" value="no" required> Equilateral
+<input type="radio" name="question10" id="question10" value="no" required > Isoceles
+<input type="radio" name="question10" id="question10" value="yes" required> Scalene
+
+
+
+<input type="submit" value="submit" onclick="test()">
+
+</form>
+
+<div id="p1"> Score: For each correct answer you will get 1 point</div>
+<script>
+    function test(){
+        var amountCorrect = 0;
+        var questionCount = 0;
+
+        for(var i = 1; i <= 10; i++) {
+            var radios = document.getElementsByName("question" + i);
+            for(var j = 0; j < radios.length; j++) {
+                var radio = radios[j];
+                if(radio.value === "yes" && radio.checked) {
+                    amountCorrect++;
+                    
+                    document.getElementById("div"+i).style.backgroundColor = 'green';
+                }
+                else{
+                    document.getElementById("div"+i).style.backgroundColor = 'red';
+                }
+
+                
+            }
+            questionCount++;
+        }
+        console.log(amountCorrect);
+        console.log(questionCount);
+        if(questionCount==10){
+            document.getElementById("p1").innerText = amountCorrect;
+        }
+        /*
+        else{
+            document.getElementById(p1).innerText = "Score: For each correct answer you will get 1 point";
+        }*/
+    }
+    
+
+</script>
+
+
+
+</body>
+</html>
+-->

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Hypotenuse of a Triangle</title>
+    <style>
+         .container{
+            width: 80%;
+            padding: 1rem;
+            margin: auto;
+            font-family:'Poppins';
+            font-size: large;
+        }
+        body{
+        /*background-image: url(https://media.istockphoto.com/vectors/vector-background-vector-id1168080557?k=6&m=1168080557&s=612x612&w=0&h=HfAWhjeL1COEWLPnZl0lxmRjpsttERgchRzj5IUbvRc=);
+        
+        */
+        background-image: url(triangle.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        
+    }
+    button{
+        padding: 0.5rem;
+           background-color: #663a82;
+           color: white;
+           margin: 1rem;
+           width: 32%;
+           font-size: medium;
+           font-weight: bold;
+           cursor: pointer;
+           border-radius: 3px;
+           display: block;
+           margin-bottom: 1rem;
+
+    }
+    a{
+        padding: 0.5rem;
+           background-color: #663a82;
+           color: white;
+           margin: 1rem;
+           width: 32%;
+           font-size: medium;
+           font-weight: bold;
+           cursor: pointer;
+           border-radius: 3px;
+           display: block;
+           margin-bottom: 1rem;
+    }
+    input{
+            display: inline-block;
+            padding: 1rem;
+            margin: 1rem;
+            height: 2vh;
+            font-family: 'Poppins';
+            font-size: medium;
+            width: 20%;
+        }
+        label{
+            font-size: large;
+            font-family: 'Poppins';
+            font-weight: bold;
+        }
+        #p1{
+           padding: 1rem;
+           margin: 1rem;
+           border: 1px solid #734f96;            
+           width: 30%;
+           font-family: 'Poppins';
+           font-size: medium;
+           font-weight: bold;
+       }
+       p{
+           font-size: large;
+           margin: 1rem;
+           margin-top: 1rem;
+           font-weight: bold;
+       }
+
+        @media (max-width: 800px){
+            input{
+                display: block;
+                margin-top: 0.5rem;
+            }
+            img{
+                width:45%;
+            }
+            #p1{
+                width: 55%;
+            }
+            button{
+                width:35%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="container">
+    <h2>Enter the lengths of sides of right angle triangle</h2>
+    <img src="https://cdn.inchcalculator.com/wp-content/uploads/2020/09/triangle-hypotenuse-two-sides.png" width="20%"/>
+    <form method="dialog">
+        <label for="NumberOne">a:</label>
+        <input type="number" name="NumberOne" id="numberOne" required min="0.0001" step="0.0001" />
+        <label for="NumberTwo">b:</label>
+        <input type="number" name="NumberTwo" id="numberTwo"  required min="0.0001" step="0.0001"/>
+        <button type="submit" value="Submit" id="btnSubmit" onclick="testVariable()">Calculate</button>
+        
+    </form>
+
+    
+
+<div>
+    <p>Hypotenuse will be calculated here</p>
+    <p id="p1">c = (a<sup>2</sup>+b<sup>2</sup>)<sup>1/2</sup></p>
+   <a href="index.html" style="text-decoration: none; color: white;"> < Go Back</a> 
+</div>
+
+<script> 
+
+function testVariable() {
+    //debugger
+    var numberOne = document.getElementById("numberOne").value;
+    var numberTwo = document.getElementById("numberTwo").value;
+
+    if(numberOne === ""||numberTwo === "" || parseFloat(numberOne) <= 0 || parseFloat(numberTwo) <= 0){
+        var a = "2".sup();
+        var b = "1/2".sup();
+    document.getElementById("p1").innerHTML = "c = (a"+a+"+b"+a+")"+b; 
+    }
+
+    else{
+
+    var squareNumberOne = Math.pow(parseFloat(numberOne),2);
+    var squareNumberTwo = Math.pow(parseFloat(numberTwo),2);
+    var sum = squareNumberOne+squareNumberTwo;
+    var hypotenuse = Math.sqrt(sum);
+
+    document.getElementById("p1").innerText = hypotenuse;
+
+    }
+
+
+}</script>
+</div>
+    </center>
+</body>
+</html>
+

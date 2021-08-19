@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Area of a Triangle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+    p {
+  font-weight: bold;
+}
+.hide{
+    display: none;
+}
+body{
+            background-image: url(triangle.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: large;
+            font-family: 'Poppins';
+        }
+        
+    
+       .container{
+        width: 90%;
+            padding: 1rem;
+            margin: auto;
+            font-family:'Poppins';
+            font-size: large;
+        }
+        input[type=number]{
+            display: inline-block;
+            padding: 1rem;
+            margin: 1rem;
+            height: 2vh;
+            font-family: 'Poppins';
+            font-size: medium;
+            width: 20%;
+        }
+        #p1,#p2,#p3{
+           padding: 1rem;
+           margin: 1rem;
+           border: 1px solid #734f96;            
+           width: 30%;
+           font-family: 'Poppins';
+           font-size: medium;
+           font-weight: bold;
+       }
+       label{
+            font-size: large;
+            font-family: 'Poppins';
+            font-weight: bold;
+        }
+        button{
+        padding: 0.5rem;
+           background-color: #663a82;
+           color: white;
+           margin: 1rem;
+           width: 32%;
+           font-size: medium;
+           font-weight: bold;
+           cursor: pointer;
+           border-radius: 3px;
+           display: block;
+           margin-bottom: 1rem;
+
+    }
+    a{
+        padding: 0.5rem;
+           background-color: #663a82;
+           color: white;
+           margin: 1rem;
+           width: 32%;
+           font-size: medium;
+           font-weight: bold;
+           cursor: pointer;
+           border-radius: 3px;
+           display: block;
+           margin-bottom: 1rem;
+    }
+    .contain{
+      width: 50%;
+      padding-left: 36rem;
+      
+    }
+    @media (max-width: 500px){
+            input[type=number]{
+                display: block;
+                margin-top: 0.5rem;
+            }
+           
+            #p1{
+                width: 55%;
+            }
+            button{
+                width:35%;
+            }
+            .contain{
+              padding-left: 6rem;
+             
+            }
+        }
+
+   @media (min-width:500px) and (max-width:1200px) {
+     .contain{
+       padding-left:13rem ;
+     }
+   }
+
+    </style>
+</head>
+<body>
+  <center>
+    <div class="container">
+  <h2>Calculate Area</h2>
+  <h3>Select an option below as per the data you have for a triangle</h3>
+  </div></center>
+
+<div class="contain">
+<input type="radio" name="tab"  onclick="show1();" />
+<label for="tab">If you have base and Height Length</label><br/><br/>
+<input type="radio" name="tab" onclick="show2();"  />
+<label for="tab">If you have length of 3 sides</label><br/><br/>
+<input type="radio" name="tab" onclick="show3();"  />
+<label for="tab">If you have length of 2 sides and one angle .</label><br/><br/>
+</div>
+
+<center>
+<div id="div1" class="hide">
+  <form method="dialog">
+    <label for="NumberOne">Base</label>
+    <input type="number" name="NumberOne" id="numberOne" required min="0.0001" step="0.0001">
+    <label>Height</label>
+    <input type="number" name="NumberTwo" id="numberTwo"  required min="0.0001" step="0.0001">
+    <button type="submit" onclick="area1()">Submit</button>
+  </form>
+  <h4> Area will be calculated here</h4>
+    <div id="p1">Area = 1/2*base*height</div>
+</div>
+
+
+<div id="div2" class="hide">
+  <form method="dialog">
+    <label for="NumberOne">a:</label>
+    <input type="number" name="NumberOne" id="numberOnes" required min="0.0001" step="0.0001">
+    <label for="NumberTwo">b:</label>
+    <input type="number" name="NumberTwo" id="numberTwos"  required min="0.0001" step="0.0001" >
+    <label for="NumberThree">c:</label>
+    <input type="number" name="NumberTwo" id="numberThrees"  required min="0.0001" step="0.0001" >
+    <button type="submit" onclick="area2()">Submit</button>
+  </form>
+  <h4> Area will be calculated here</h4>
+    <div id="p2">Area = (s*(s-a)*(s-b)*(s-c))<sup>1/2</sup></div>
+</div>
+
+
+<div id="div3" class="hide">
+  <form method="dialog">
+    <label for="NumberOne">b:</label>
+    <input type="number" name="NumberOne" id="NumberOne" required min="0.0001" step="0.0001">
+    <label for="NumberTwo">c:</label>
+    <input type="number" name="NumberTwo" id="NumberTwo"  required min="0.0001" step="0.0001" >
+    <label for="NumberThree">∠A(deg)</label>
+    <input type="number" name="NumberTwo" id="NumberThree"  required min="0.0001" step="0.0001" >
+    <button type="submit" onclick="area3()">Submit</button>
+  </form>
+  <h4> Area will be calculated here</h4>
+    <div id="p3">Area = 1/2*b*c*sin(A)</div>
+</div>
+
+<a href="index.html" style="text-decoration: none; color: white;"> < Go Back</a> 
+
+<script>
+  function show1(){
+    document.getElementById('div1').style.display = 'block';
+    document.getElementById('div2').style.display = 'none';
+    document.getElementById('div3').style.display = 'none';
+  }
+  function show2(){
+    document.getElementById('div2').style.display = 'block';
+    document.getElementById('div1').style.display = 'none';
+    document.getElementById('div3').style.display = 'none';
+  }
+  function show3(){
+    document.getElementById('div3').style.display = 'block';
+    document.getElementById('div2').style.display = 'none';
+    document.getElementById('div1').style.display = 'none';
+  }
+  
+  function area1(){
+      var num1 = document.getElementById('numberOne').value;
+      var num2 = document.getElementById('numberTwo').value;
+
+      if(num1 === "" || num2 === "" || parseFloat(num1)<0.0001 || parseFloat(num2)<0.0001){
+        document.getElementById('p1').innerText = "Area = 1/2*base*height";
+      }
+      else{
+
+      var area = (1/2)*(parseFloat(num1))*(parseFloat(num2));
+
+      document.getElementById('p1').innerText = area;
+      }
+  }
+
+  function area2(){
+    var num1 = document.getElementById('numberOnes').value;
+    var num2 = document.getElementById('numberTwos').value;
+    var num3 = document.getElementById('numberThrees').value;
+
+    if(num1 === "" || num2 === "" || num3==="" || parseFloat(num1)<0.0001 || parseFloat(num2)<0.0001 || parseFloat(num3)<0.0001){
+        document.getElementById('p1').innerText = "Area = (s*(s-a)*(s-b)*(s-c))"+"1/2".sup();
+      }
+else{
+    var s = (parseFloat(num1)+parseFloat(num2)+parseFloat(num3))/2;
+   // console.log(s);
+
+    var multiply = Math.abs(s*(s-num1)*(s-num2)*(s-num3));
+    //console.log(multiply)
+    var result = Math.sqrt(multiply);
+
+    document.getElementById('p2').innerText = result;
+
+  }
+}
+
+  function area3(){
+      var num1 = document.getElementById('NumberOne').value;
+      var num2 = document.getElementById('NumberTwo').value;
+      var num3 = document.getElementById('NumberThree').value;
+      if(num1 === "" || num2 === "" || num3==="" || parseFloat(num1)<0.0001 || parseFloat(num2)<0.0001 || parseFloat(num3)<0.0001){
+        document.getElementById('p1').innerText = "Area = 1/2*b*C*sin(A)";
+      }
+      else{
+      var result = (1/2)*parseFloat(num1)*parseFloat(num2)*Math.sin(((parseFloat(num3))*Math.PI)/180);
+
+      document.getElementById('p3').innerText = result;
+  }
+}
+
+  // 1/2*b*c*sin(A) 90 * Math.PI / 180
+
+  </script>
+  </div>
+  </center>
+</body>
+</html>
